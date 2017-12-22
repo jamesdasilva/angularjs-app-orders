@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-heading-content">
+			<span class="panel-heading-content-left">New Order</span>
+			<span class="panel-heading-content-right">
+				<span class="glyphicon glyphicon-search" aria-hidden="true" ui-sref="get-orders"></span>
+			</span>
+		</div>
+	</div>
+	<div class="panel-body">
+		<form>
+			<div class="form-group">
+			  <label for="product-user">User</label>
+			  <select class="form-control input-sm" id="product-user" ng-model="dados.product_user_id" ng-options="usuario.id as usuario.name for usuario in usuarios">
+			    <option value="">Select user</option>
+			  </select>
+			</div>
+			<div class="form-group">
+			  <label for="product">Product:</label>
+			  <select class="form-control input-sm" id="product" ng-model="dados.product_id" ng-options="product.id as product.name for product in produtos">
+			    <option value="">Select product</option>
+			  </select>
+			</div>
+		    <div class="form-group">
+		        <label for="quantity">Quantity</label>
+		        <input type="text" class="form-control input-sm" id="Quantity" ng-model="dados.quantity" />
+		    </div>
+
+			<button class="btn btn-large btn-block btn-primary" type="button" ng-click="enviarDados(dados)" ng-disabled="!dados.quantity || !dados.product_id || !dados.product_user_id">Create</button>
+
+			<div class="alert alert-success" ng-show="dados.success" ng-show="dados.success" role="alert">Order created successfully! (<a ui-sref="edit-order({id: dados.id})" class="alert-link">edit order</a>)</div>
+
+			<div class="alert alert-danger" ng-show="dados.erro" role="alert">
+			  Could not create the order :(
+			</div>
+		</form>
+
+	</div>
+	<div class="panel-footer">Acruxx | Fullstack dev test</div>
+</div>

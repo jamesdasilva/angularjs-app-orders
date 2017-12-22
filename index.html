@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="teste-acruxx">
+<head>
+  <meta charset="UTF-8">
+  <title>Acruxx | Fullstack dev test</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        
+        <ui-view></ui-view>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- vendor -->
+  <script src="vendor/angular-1.6.5.min.js"></script>
+  <script src="vendor/angular-ui-router.min.js"></script>
+  
+  <script src="app/app.js"></script>
+  <script src="app/app.state.js"></script>
+
+  <script src="app/new-order/new-order.component.js"></script>
+  <script src="app/new-order/new-order.controller.js"></script>
+  <script src="app/new-order/new-order.service.js"></script>
+  <script src="app/new-order/users.service.js"></script>
+  <script src="app/new-order/products.service.js"></script>
+  <script src="app/edit-orders/edit-order.component.js"></script>
+  <script src="app/edit-orders/edit-order.controller.js"></script>
+  <script src="app/get-orders/get-orders.component.js"></script>
+  <script src="app/list-orders/list-orders.component.js"></script>
+  <script src="app/list-orders/list-orders.controller.js"></script>
+  <script src="app/list-orders/list-orders.service.js"></script>
+
+</body>
+</html>

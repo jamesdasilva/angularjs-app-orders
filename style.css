@@ -1,0 +1,33 @@
+.panel{
+    margin-top: 30px
+}
+.panel-heading-content{
+    display: flex;
+    justify-content:space-between;
+    font-size: 20px
+}
+.panel-heading-content-left{
+    font-weight: bold;
+    color: #337ab7
+}
+.panel-heading-content-right{
+    color: #337ab7
+}
+.glyphicon{
+    cursor: pointer;
+    color: #337ab7
+} 
+.glyphicon-plus{
+    margin-right:10px;
+}
+.glyphicon-trash{
+    margin-right:10px;
+}
+.alert{
+    margin-top: 20px;
+    text-align: center
+}
+.radio-circle{
+    position: relative !important;
+    top:4px;
+}

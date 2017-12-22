@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-heading-content">
+			<span class="panel-heading-content-left">List orders</span>
+			<span class="panel-heading-content-right">
+				<span class="glyphicon glyphicon-menu-left" aria-hidden="true" ui-sref="get-orders"></span>
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" ui-sref="new-order" ></span>
+			</span>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="filter by product or user" ng-model="criterioDeBusca"  />
+		</div><!-- /input-group -->
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>User</th>
+					<th>Product</th>
+					<th>Date</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="dado in dados | filter:criterioDeBusca">
+					<td>{{dado.user_name}}</td>
+					<td>{{dado.product_name}}</td>
+					<td>{{dado.date}}</td>
+					<td>{{dado.product_price}}</td>
+					<td>
+						<span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click="excluirOrder(dado.id)" ></span>
+						<span class="glyphicon glyphicon-pencil" aria-hidden="true" ui-sref="edit-order({id: dado.id})" ></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="btn btn-large btn-block btn-primary" type="button" ui-sref="new-order">Add new order</button>
+
+	</div>
+	<div class="panel-footer">Acruxx | Fullstack dev test</div>
+</div>
